@@ -75,6 +75,36 @@
         footer p {
             margin: 0;
         }
+          /* Trang trí hai bên */
+        .sidebar-left,
+        .sidebar-right {
+            position: fixed;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            background-color: #e7dcc4;
+            background-image: url('media/background.png'); /* Thay bằng đường dẫn đến hình ảnh phù hợp */
+            background-repeat: repeat;
+            background-size: contain;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .sidebar-left {
+            left: 0;
+            border-right: 3px solid #8b5e3c;
+        }
+
+        .sidebar-right {
+            right: 0;
+            border-left: 3px solid #8b5e3c;
+        }
+
+        /* Nội dung chính trên mọi thiết bị */
+        .container {
+            position: relative;
+            z-index: 2;
+        }
         @media (max-width: 768px) {
             main {
                 padding: 15px;
@@ -86,6 +116,9 @@
     </style>
 </head>
 <body>
+    <div class="sidebar-left"></div>
+    <div class="sidebar-right"></div>
+    <div class="container">
     <header>
         <h1>Các nhà lãnh đạo trong cách mạng Việt Nam</h1>
     </header>
@@ -178,5 +211,6 @@
     <footer>
         <p>&copy; 2025 - Các nhà lãnh đạo trong cách mạng Việt Nam <br>Làm bởi Hoàng Hải, Gia Hưng, Đăng Hưng, Hà Phương, Hồng Thiên, TNT</p>
     </footer>
+    </div>
 </body>
 </html>
