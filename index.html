@@ -75,7 +75,8 @@
         footer p {
             margin: 0;
         }
-          /* Trang trí hai bên */
+
+        /* Trang trí hai bên */
         .sidebar-left,
         .sidebar-right {
             position: fixed;
@@ -83,7 +84,7 @@
             width: 100px;
             height: 100%;
             background-color: #e7dcc4;
-            background-image: url('media/background.png'); /* Thay bằng đường dẫn đến hình ảnh phù hợp */
+            background-image: url('media/background2.jpg'); /* Thay bằng đường dẫn đến hình ảnh phù hợp */
             background-repeat: repeat;
             background-size: contain;
             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
@@ -105,12 +106,52 @@
             position: relative;
             z-index: 2;
         }
+
+        /* Mục lục */
+        .toc {
+            position: fixed;
+            top: 20px;
+            left: 120px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 3;
+            max-width: 200px;
+        }
+        .toc h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #8b0000;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc ul li {
+            margin-bottom: 10px;
+        }
+        .toc ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .toc ul li a:hover {
+            color: #8b0000;
+        }
+
         @media (max-width: 768px) {
             main {
                 padding: 15px;
             }
             header h1 {
                 font-size: 2em;
+            }
+            .toc {
+                left: 10px;
+                max-width: 150px;
+                font-size: 0.9em;
             }
         }
     </style>
@@ -119,98 +160,106 @@
     <div class="sidebar-left"></div>
     <div class="sidebar-right"></div>
     <div class="container">
-    <header>
-        <h1>Các nhà lãnh đạo trong cách mạng Việt Nam</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Chủ tịch Hồ Chí Minh (Cách mạng tháng 8)</h2>
-            <img src="media/HCM01.jpg" alt="Ảnh Hồ Chí Minh">
-            <p>
-                Tên thật: Nguyễn Sinh Cung <br> 
-                Sinh ngày: 19 tháng 5 năm 1890 <br>
-                Quê quán: Làng Sen, tỉnh Nghệ An <br>
-            <br>Bác là một nhà cách mạng vĩ đại, người sáng lập Đảng Cộng sản Việt Nam, lãnh đạo cuộc kháng chiến chống thực dân Pháp
-            và đế quốc Mỹ, đồng thời là người khai sinh nước Việt Nam Dân chủ Cộng hòa.</p>
-            <p>Những đóng góp nổi bật:</p>
+        <nav class="toc">
+            <h3>Mục lục</h3>
             <ul>
-                <li>Tổ chức và lãnh đạo Mặt trận Việt Minh. <br>
-                    <center>
-                    <img src="media/HCM02.jpg" alt="Ảnh mặt trận Việt Minh cùng với Bác Hồ">
-                    </center>
-                </li>
-                <li>Chỉ đạo cuộc tổng khởi nghĩa tháng 8 năm 1945. <br>
-                    <center>
-                    <img src="media/HCM03.jpg" alt="Ảnh Cách Mạng tháng 8">
-                    </center>
-                </li>
-                <li>Đọc Tuyên ngôn Độc lập ngày 2/9/1945. <br>
-                    <center>
-                    <img src="media/HCM04.jpeg" alt="Ảnh toàn văn đọc bản Tuyên Ngôn độc lập">
-                    </center>
-                    <br>
-                    <audio controls>
-                        <source src="media/TNĐL.mp3">
-                    </audio>
-                </li>
+                <li><a href="#hcm">Chủ tịch Hồ Chí Minh</a></li>
+                <li><a href="#ntt">Nguyễn Trung Trực</a></li>
+                <li><a href="#vcc">Võ Chí Công</a></li>
             </ul>
-        </section>
-        <section>
-            <h2>Nguyễn Trung Trực (Kháng chiến chống Pháp)</h2>
-            <img src="media/NTT01.png" alt="Ảnh Nguyễn Trung Trực">
-            <p>
-                Tên thật: Nguyễn Văn Lịch <br>
-                Sinh ngày: 1838 (ngày tháng chưa rõ) <br>
-                Quê quán: phủ Tân An, tỉnh Gia Định <br>
-                <br>Nguyễn Trung Trực xuất thân từ một gia đình nông dân nghèo nhưng có tinh thần yêu nước. Ông nổi bật trong phong trào
-            kháng chiến chống Pháp ở miền Nam và trở thành một biểu tượng bất khuất.</p>
-            <p>Những đóng góp nổi bật:</p>
-            <ul>
-                <li>Lãnh đạo cuộc khởi nghĩa tại Rạch Giá năm 1868. <br>
-                    <center>
-                    <img src="media/NTT02.jpg" alt="Ảnh khởi nghĩa Nguyễn Trung Trực">
-                    </center>
-                </li>
-                <li>Xây dựng lực lượng kháng chiến ở Nam Bộ. <br>
-                    <center>
-                    <img src="media/NTT03.jpg" alt="Ảnh khởi nghĩa Nguyễn Trung Trực">
-                    </center>
-                </li>
-                <li>Thể hiện tinh thần bất khuất trước kẻ thù.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Võ Chí Công (Kháng chiến chống Mỹ)</h2>
-            <img src="media/VCC01.jpg" alt="Ảnh Võ Chí Công">
-            <p>
-                Tên thật: Võ Toàn <br>
-                Ngày sinh: 7/8/1912 <br>
-                Quê quán: Phú Thành, Quảng Nam <br>
-                <br>Võ Chí Công là một nhà lãnh đạo quan trọng trong cuộc kháng chiến chống Mỹ cứu nước. Ông đã góp phần tổ
-            chức và lãnh đạo nhiều chiến dịch lớn, đồng thời đảm nhiệm nhiều vai trò quan trọng trong công tác chính trị.</p>
-            <p>Những đóng góp nổi bật:</p>
-            <ul>
-                <li>Chỉ huy nhiều chiến dịch quan trọng tại miền Nam. <br>
-                    <center>
-                    <img src="media/VCC02.jpg" alt="Ảnh Võ Chí Công chỉ huy chiến dịch">
-                    </center>
-                </li>
-                <li>Tham gia xây dựng Mặt trận Dân tộc Giải phóng miền Nam. <br>
-                    <center>
-                    <img src="media/VCC03.jpg" alt="Ảnh mặt trận Dân Tộc Giải phóng miền Nam Việt Nam">
-                    </center>
-                </li>
-                <li>Đóng góp vào chiến thắng Tết Mậu Thân 1968. <br>
-                    <center>
-                    <img src="media/VCC04.jpg" alt="Ảnh chiến dịch Tết Mậu thân 1968">
-                    </center>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 - Các nhà lãnh đạo trong cách mạng Việt Nam <br>Làm bởi Hoàng Hải, Gia Hưng, Đăng Hưng, Hà Phương, Hồng Thiên, TNT</p>
-    </footer>
+        </nav>
+        <header>
+            <h1>Các nhà lãnh đạo trong cách mạng Việt Nam</h1>
+        </header>
+        <main>
+            <section id="hcm">
+                <h2>Chủ tịch Hồ Chí Minh (Cách mạng tháng 8)</h2>
+                <img src="media/HCM01.jpg" alt="Ảnh Hồ Chí Minh">
+                <p>
+                    Tên thật: Nguyễn Sinh Cung <br> 
+                    Sinh ngày: 19 tháng 5 năm 1890 <br>
+                    Quê quán: Làng Sen, tỉnh Nghệ An <br>
+                <br>Bác là một nhà cách mạng vĩ đại, người sáng lập Đảng Cộng sản Việt Nam, lãnh đạo cuộc kháng chiến chống thực dân Pháp
+                và đế quốc Mỹ, đồng thời là người khai sinh nước Việt Nam Dân chủ Cộng hòa.</p>
+                <p>Những đóng góp nổi bật:</p>
+                <ul>
+                    <li>Tổ chức và lãnh đạo Mặt trận Việt Minh. <br>
+                        <center>
+                        <img src="media/HCM02.jpg" alt="Ảnh mặt trận Việt Minh cùng với Bác Hồ">
+                        </center>
+                    </li>
+                    <li>Chỉ đạo cuộc tổng khởi nghĩa tháng 8 năm 1945. <br>
+                        <center>
+                        <img src="media/HCM03.jpg" alt="Ảnh Cách Mạng tháng 8">
+                        </center>
+                    </li>
+                    <li>Đọc Tuyên ngôn Độc lập ngày 2/9/1945. <br>
+                        <center>
+                        <img src="media/HCM04.jpeg" alt="Ảnh toàn văn đọc bản Tuyên Ngôn độc lập">
+                        </center>
+                        <br>
+                        <audio controls>
+                            <source src="media/TNĐL.mp3">
+                        </audio>
+                    </li>
+                </ul>
+            </section>
+            <section id="ntt">
+                <h2>Nguyễn Trung Trực (Kháng chiến chống Pháp)</h2>
+                <img src="media/NTT01.png" alt="Ảnh Nguyễn Trung Trực">
+                <p>
+                    Tên thật: Nguyễn Văn Lịch <br>
+                    Sinh ngày: 1838 (ngày tháng chưa rõ) <br>
+                    Quê quán: phủ Tân An, tỉnh Gia Định <br>
+                    <br>Nguyễn Trung Trực xuất thân từ một gia đình nông dân nghèo nhưng có tinh thần yêu nước. Ông nổi bật trong phong trào
+                kháng chiến chống Pháp ở miền Nam và trở thành một biểu tượng bất khuất.</p>
+                <p>Những đóng góp nổi bật:</p>
+                <ul>
+                    <li>Lãnh đạo cuộc khởi nghĩa tại Rạch Giá năm 1868. <br>
+                        <center>
+                        <img src="media/NTT02.jpg" alt="Ảnh khởi nghĩa Nguyễn Trung Trực">
+                        </center>
+                    </li>
+                    <li>Xây dựng lực lượng kháng chiến ở Nam Bộ. <br>
+                        <center>
+                        <img src="media/NTT03.jpg" alt="Ảnh khởi nghĩa Nguyễn Trung Trực">
+                        </center>
+                    </li>
+                    <li>Thể hiện tinh thần bất khuất trước kẻ thù.</li>
+                </ul>
+            </section>
+            <section id="vcc">
+                <h2>Võ Chí Công (Kháng chiến chống Mỹ)</h2>
+                <img src="media/VCC01.jpg" alt="Ảnh Võ Chí Công">
+                <p>
+                    Tên thật: Võ Toàn <br>
+                    Ngày sinh: 7/8/1912 <br>
+                    Quê quán: Phú Thành, Quảng Nam <br>
+                    <br>Võ Chí Công là một nhà lãnh đạo quan trọng trong cuộc kháng chiến chống Mỹ cứu nước. Ông đã góp phần tổ
+                chức và lãnh đạo nhiều chiến dịch lớn, đồng thời đảm nhiệm nhiều vai trò quan trọng trong công tác chính trị.</p>
+                <p>Những đóng góp nổi bật:</p>
+                <ul>
+                    <li>Chỉ huy nhiều chiến dịch quan trọng tại miền Nam. <br>
+                        <center>
+                        <img src="media/VCC02.jpg" alt="Ảnh Võ Chí Công chỉ huy chiến dịch">
+                        </center>
+                    </li>
+                    <li>Tham gia xây dựng Mặt trận Dân tộc Giải phóng miền Nam. <br>
+                        <center>
+                        <img src="media/VCC03.jpg" alt="Ảnh mặt trận Dân Tộc Giải phóng miền Nam Việt Nam">
+                        </center>
+                    </li>
+                    <li>Đóng góp vào chiến thắng Tết Mậu Thân 1968. <br>
+                        <center>
+                        <img src="media/VCC04.jpg" alt="Ảnh chiến dịch Tết Mậu thân 1968">
+                        </center>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 - Các nhà lãnh đạo trong cách mạng Việt Nam <br>Làm bởi Hoàng Hải, Gia Hưng, Đăng Hưng, Hà Phương, Hồng Thiên, TNT</p>
+        </footer>
     </div>
 </body>
 </html>
